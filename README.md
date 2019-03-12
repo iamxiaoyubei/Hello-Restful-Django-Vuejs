@@ -33,3 +33,5 @@ https://www.jianshu.com/p/6187d5915f70
 前端也需要学习调用API：http://www.runoob.com/googleapi/google-maps-api-key.html
 
 谷歌API文档：https://developers.google.com/maps/documentation/javascript/tutorial?hl=zh_CN
+
+更改数据库表格：https://docs.djangoproject.com/en/2.1/topics/db/models/
