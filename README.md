@@ -6,10 +6,12 @@
 
 http://www.bubuko.com/infodetail-2982730.html
 
+mysqldb driver:https://pypi.org/project/mysqlclient/
+
 谷歌API教程：http://www.runoob.com/googleapi/googleapi-tutorial.html
 https://www.jianshu.com/p/6187d5915f70
 
 
-目前用的pymysql连接mysql
-打算换成官网的mysqldb
-https://mysqlclient.readthedocs.io/user_guide.html#installation
+前端也需要学习调用API：http://www.runoob.com/googleapi/google-maps-api-key.html
+
+谷歌API文档：https://developers.google.com/maps/documentation/javascript/tutorial?hl=zh_CN
