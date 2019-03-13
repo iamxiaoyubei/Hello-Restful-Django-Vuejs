@@ -5,13 +5,20 @@ Please install python3.7.2 with pip and then run:
 
 `pip install requirements.txt`
 
-Open your MySQL database and change your database password in mysite/settings.py
+Open your MySQL database and change your database password in mysite/mysite/settings.py
 
 Then you can run with:
 
 `python manage.py runserver`
 
-in the root dir.
+in the mysite/ dir(where you can find manage.py).
+
+Everytime you `git pull` the newest code, please run:
+
+`python manage.py makemigrations`
+`python manage.py migrate`
+
+to refresh database.
 
 @苑珍，请于[API文档](./API.md)查看API
 苑珍你可以用于调试
