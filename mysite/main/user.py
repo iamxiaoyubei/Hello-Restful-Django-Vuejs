@@ -4,7 +4,7 @@ import json
 from . import models
 import hashlib
 
-@require_http_methods(["POST"])
+@require_http_methods(["POST", "OPTIONS"])
 def addUser(request):
     received_data = json.loads(request.body)
     # print (received_data)
@@ -17,7 +17,7 @@ def addUser(request):
     else:
         return HttpResponse("Duplicate Username", status=400)
 
-@require_http_methods(["DELETE"])
+@require_http_methods(["DELETE", "OPTIONS"])
 def deleteUser(request, username):
     queryset = models.WebsiteUser.objects.filter(username=username)
     if queryset.exists():

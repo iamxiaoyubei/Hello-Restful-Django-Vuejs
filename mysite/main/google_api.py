@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 import json
 
-@require_http_methods(["GET"])
+@require_http_methods(["GET", "OPTIONS"])
 def translate(request):
     translator = Translator(service_urls=['translate.google.cn'])
     source = '我还是不开心！'
