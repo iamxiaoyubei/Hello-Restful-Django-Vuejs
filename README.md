@@ -13,9 +13,7 @@ Then you can run with:
 
 in the root dir.
 
-请求url:http://127.0.0.1:8000/api/google/translate
-GET请求
-会返回{"text":"I am still not happy!"}json对象
+@苑珍，请于[API文档](./API.md)查看API
 苑珍你可以用于调试
 
 ## REFERENCE:

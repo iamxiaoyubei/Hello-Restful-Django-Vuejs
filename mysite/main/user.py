@@ -9,13 +9,22 @@ def addUser(request):
     received_data = json.loads(request.body)
     # print (received_data)
 
-    newUser = models.User(username=received_data['username'], password=addSalt(received_data['password']))
+    newUser = models.WebsiteUser(username=received_data['username'], password=addSalt(received_data['password']))
 
-    if not models.User.objects.filter(username=newUser.username).exists():
+    if not models.WebsiteUser.objects.filter(username=newUser.username).exists():
         newUser.save(force_insert=True)
         return HttpResponse("Regist new user successfully!")
     else:
         return HttpResponse("Duplicate Username", status=400)
+
+@require_http_methods(["DELETE"])
+def deleteUser(request, username):
+    queryset = models.WebsiteUser.objects.filter(username=username)
+    if queryset.exists():
+        queryset.delete()
+        return HttpResponse('Deleted!', status=200)
+    else:
+        return HttpResponse('This User did not exist', status=405)
 
 def addSalt(data):
     for i in range(10):
